@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:andriod="http://schemas.android.com/apk/res-auto"
     android:padding="25dp"
     android:background="@drawable/bacground_gradient"
+    android:theme="@style/CustomTheme"
     tools:context=".Fragments.WeatherFragment">
     <RelativeLayout
         android:id="@+id/mainContainer"
@@ -25,11 +25,11 @@
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DHAKA"
-                android:textSize="30dp" />
+
+                android:textSize="30sp" />
             <TextView android:id="@+id/time" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:textSize="14dp"
-                android:text="20 April 2012, 20:08 PM"/>
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
 
 
         </LinearLayout>
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Clear Sky"
+
                 android:textSize="18sp" />
 
             <TextView
@@ -56,7 +56,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-thin"
-                android:text="29°C"
                 android:textSize="90sp" />
 
             <LinearLayout
@@ -112,9 +111,11 @@
                         android:src="@drawable/iconssunrise" android:tint="#FFFFFF"/>
                     <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:textSize="12dp" android:text="Sunrise"/>
+                        android:text="Sunrise"
+                        android:textSize="12sp" />
                     <TextView android:id="@+id/sunrise" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="14dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
                         android:text="06:40 AM"/>
                 </LinearLayout>
                 <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
@@ -126,9 +127,11 @@
                         android:src="@drawable/iconssunset" android:tint="#FFFFFF"/>
                     <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:textSize="12dp" android:text="Sunset"/>
+                        android:text="Sunset"
+                        android:textSize="12sp" />
                     <TextView android:id="@+id/sunset" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="14dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
                         android:text="06:40 AM"/>
                 </LinearLayout>
                 <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
@@ -156,14 +159,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pressure"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="06:40 AM"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
 

@@ -3,14 +3,16 @@ package com.example.wheatherapp.Fragments
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
-import androidx.core.util.rangeTo
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RelativeLayout
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.wheatherapp.Forecast
-
 import com.example.wheatherapp.R
 import com.google.gson.Gson
 import java.net.URL
@@ -32,6 +34,8 @@ companion object{
             WeatherTask(city.toString()).execute()
             //Thread.sleep(2000)
             //Log.d("TAG",city)
+            (activity as AppCompatActivity).supportActionBar?.hide()
+
         }
         super.onCreate(savedInstanceState)
     }

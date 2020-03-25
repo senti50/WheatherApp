@@ -5,29 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.SearchFragment"
+    android:background="@drawable/background_search"
     android:orientation="vertical">
 
 
     <Button
         android:id="@+id/buttonSearch"
-        android:layout_width="wrap_content"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/search_button"
         android:text="@string/button_search"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCity"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.050" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextCity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/city_label"
+        android:inputType="textPersonName|textCapSentences"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.30"
-        tools:layout_editor_absoluteX="6dp"
-        android:hint="@string/city_label"
-        />
+        app:layout_constraintVertical_bias="0.114"
+        tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

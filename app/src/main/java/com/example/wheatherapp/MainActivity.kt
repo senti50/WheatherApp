@@ -2,9 +2,10 @@ package com.example.wheatherapp
 
 
 import android.content.Context
-import android.net.ConnectivityManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
+import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.wheatherapp.Fragments.SearchFragment
 
@@ -24,7 +25,13 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
-
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        if (currentFocus != null) {
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+        }
+        return super.dispatchTouchEvent(ev)
+    }
 
     }
 

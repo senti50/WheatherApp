@@ -21,10 +21,10 @@ import java.util.*
 import kotlin.math.roundToInt
 
 
-class WeatherFragment : Fragment() {
+class ShowWeatherFragment : Fragment() {
 companion object{
-    fun newInsatnce():WeatherFragment{
-        return WeatherFragment()
+    fun newInsatnce(): ShowWeatherFragment {
+        return ShowWeatherFragment()
     }
 }
 
@@ -51,12 +51,8 @@ companion object{
 
    inner class WeatherTask (val city:String): AsyncTask<String, Void, String>() {
         val API_KEY:String="413c12c4375379410d50896552c776de"
-        override fun onPreExecute() {
-            super.onPreExecute()
 
-        }
-
-        override fun doInBackground(vararg params: String?): String? {
+       override fun doInBackground(vararg params: String?): String? {
             var response: String?
             try {
                 response =

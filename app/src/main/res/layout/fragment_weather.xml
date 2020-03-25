@@ -6,7 +6,7 @@
     android:padding="25dp"
     android:background="@drawable/bacground_gradient"
     android:theme="@style/CustomTheme"
-    tools:context=".Fragments.WeatherFragment">
+    tools:context=".Fragments.ShowWeatherFragment">
     <RelativeLayout
         android:id="@+id/mainContainer"
         android:layout_width="match_parent"
@@ -107,32 +107,66 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:background="#3CF1EBF1">
-                    <ImageView android:layout_width="25dp" android:layout_height="25dp"
-                        android:src="@drawable/iconssunrise" android:tint="#FFFFFF"/>
-                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Sunrise"
-                        android:textSize="12sp" />
-                    <TextView android:id="@+id/sunrise" android:layout_width="wrap_content"
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/iconssunrise"
+                        android:tint="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:text="06:40 AM"/>
+                        android:text="@string/sunrise_label"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/sunrise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+
                 </LinearLayout>
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
-                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:orientation="vertical" android:layout_weight="1"
-                    android:gravity="center" android:padding="8dp"
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
                     android:background="#3CF1EBF1">
-                    <ImageView android:layout_width="25dp" android:layout_height="25dp"
-                        android:src="@drawable/iconssunset" android:tint="#FFFFFF"/>
-                    <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Sunset"
-                        android:textSize="12sp" />
-                    <TextView android:id="@+id/sunset" android:layout_width="wrap_content"
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/iconssunset"
+                        android:tint="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:text="06:40 AM"/>
+                        android:text="@string/sunset_label"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/sunset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+
                 </LinearLayout>
                 <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
 
@@ -158,33 +192,32 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pressure"
+                        android:text="@string/pressure_label"
                         android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="06:40 AM"
                         android:textSize="14sp" />
                 </LinearLayout>
+
             </LinearLayout>
 
             <Space android:layout_width="wrap_content" android:layout_height="10dp"/>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:weightSum="3">
-
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
-
-                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
-            </LinearLayout>
         </LinearLayout>
+
     </RelativeLayout>
 
-    <TextView android:id="@+id/errorText" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_centerInParent="true"
-        android:visibility="gone" android:text="Something went wrong"/>
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/error_text"
+        android:textSize="30sp"
+        android:visibility="gone" />
 
 
 </RelativeLayout>

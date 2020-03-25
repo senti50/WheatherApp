@@ -37,7 +37,7 @@ class SearchFragment : Fragment() {
                     val city: String = editTextCity.text.toString().removeSuffix(" ")
                     val bundle = Bundle()
                     bundle.putString("city", city)
-                    val fragment = WeatherFragment.newInsatnce()
+                    val fragment = ShowWeatherFragment.newInsatnce()
                     fragment.arguments = bundle
                     replaceFragment(fragment)
 

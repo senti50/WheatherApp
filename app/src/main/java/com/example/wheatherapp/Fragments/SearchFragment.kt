@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import com.example.wheatherapp.R
 import kotlinx.android.synthetic.main.fragment_search.*
 
-
 class SearchFragment : Fragment() {
     companion object{
         fun newInstance():SearchFragment{
